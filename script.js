@@ -1,4 +1,4 @@
-document.querySelectorAll("btnDetail").forEach((item) => {
+document.querySelectorAll(".btnDetail").forEach((item) => {
   item.addEventListener("click", (e) => {
     let parent = e.target.parentNode.parentNode;
     console.log("123");
