@@ -85,8 +85,8 @@
         ng-controller="BookstoreController"
         class="row row-cols-md-3 row-cols-2 gx-5 p-5"
       >
-        <div class="col mb-5">
-          <div ng-repeat="book in books" class="card shadow">
+        <div ng-repeat="book in books" class="col mb-5">
+          <div class="card shadow">
             <img
               ng-src="Assets/{{book.image}}"
               alt="{{book.title}}"
@@ -99,12 +99,19 @@
               <p>{{book.desc}}</p>
             </div>
             <div class="card-footer d-md-flex">
-              <a class="btn btn-sm btn-primary d-block btnDetail">detail</a>
               <span
                 class="ms-auto text-danger fw-bold d-block text-center harga"
                 >{{book.price}}</span
               >
+              <a class="btn btn-sm btn-primary d-block btnDetail">Detail</a>
             </div>
+            <a
+              href="https://api.whatsapp.com/send?phone=${6287780992445}&text=Halo"
+              ;
+              target="_blank"
+              class="btn btn-sm btn-warning d-block btnBeli"
+              ><b>Beli Produk</b>
+            </a>
           </div>
         </div>
       </div>
@@ -206,6 +213,7 @@
         </div>
       </div>
     </div>
+
     <script>
       angular
         .module("bookstore", [])
@@ -222,6 +230,32 @@
               desc: "bahan buku 2",
               price: 15,
               image: "Buku2.jpg",
+            },
+
+            {
+              title: "Book 3",
+              desc: "bahan buku 3",
+              price: 15,
+              image: "Buku3.jpg",
+            },
+
+            {
+              title: "Book 4",
+              desc: "bahan buku 4",
+              price: 15,
+              image: "Buku4.jpg",
+            },
+            {
+              title: "Book 5",
+              desc: "bahan buku 5",
+              price: 15,
+              image: "Buku5.jpg",
+            },
+            {
+              title: "Book 6",
+              desc: "bahan buku 6",
+              price: 15,
+              image: "Buku6.jpg",
             },
           ];
         });
