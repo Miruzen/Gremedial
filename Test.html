@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head ng-app="bookstore">
+<html lang="en" ng-app="bookstore">
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Gremedial</title>
@@ -12,6 +12,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   </head>
   <body>
     <nav class="navbar" style="background-color: #e3f2fd">
@@ -87,7 +88,7 @@
         <div class="col mb-5">
           <div ng-repeat="book in books" class="card shadow">
             <img
-              ng-src="{{book.image}}"
+              ng-src="Assets/{{book.image}}"
               alt="{{book.title}}"
               class="card-img-top"
             />
@@ -205,17 +206,10 @@
         </div>
       </div>
     </div>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script>
       angular
         .module("bookstore", [])
-        .controller("bookstorekontol", function ($scope) {
+        .controller("BookstoreController", function ($scope) {
           $scope.books = [
             {
               title: "Book 1",
@@ -232,7 +226,11 @@
           ];
         });
     </script>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
